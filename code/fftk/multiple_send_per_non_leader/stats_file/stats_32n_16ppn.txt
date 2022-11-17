@@ -1,0 +1,45 @@
+# command : ./fftk_block (completed)
+
+
+#                           [time]        [calls]       <%mpi>        <%wall>
+# MPI_Alltoall              15017.6       1.024e+06     98.22         71.57         
+# MPI_Init                  169.723       512           1.11          0.81          
+# MPI_Scan                  44.1734       2048          0.29          0.21          
+# MPI_Comm_split            33.862        1024          0.22          0.16          
+# MPI_Barrier               23.6877       512           0.15          0.11          
+# MPI_Type_vector           0.0271876     2048          0.00          0.00          
+# MPI_Finalize              0.0169096     512           0.00          0.00          
+# MPI_Type_commit           0.00360107    4096          0.00          0.00          
+# MPI_Type_free             0.00303602    4096          0.00          0.00          
+# MPI_Type_create_resized   0.00106192    2048          0.00          0.00          
+# MPI_Wtime                 0.000239611   1024          0.00          0.00          
+# MPI_Comm_rank             0.000160694   2048          0.00          0.00          
+# MPI_Comm_size             7.4625e-05    1024          0.00          0.00          
+# MPI_TOTAL                 15289.1       1.04499e+06   100.00        72.87         
+
+
+
+# command : ./fftk_non_block (completed)
+
+
+#                           [time]        [calls]       <%mpi>        <%wall>
+# MPI_Waitall               14702.6       1.152e+06     74.23         58.01         
+# MPI_Isend                 1859.26       896000        9.39          7.34          
+# MPI_Alltoall              1578.28       128000        7.97          6.23          
+# MPI_Irecv                 777.04        256000        3.92          3.07          
+# MPI_Init                  477.824       512           2.41          1.89          
+# MPI_Comm_split            355.124       2560          1.79          1.40          
+# MPI_Scan                  28.9084       2048          0.15          0.11          
+# MPI_Barrier               23.6348       512           0.12          0.09     
+# MPI_Type_size             0.463762      1.024e+06     0.00          0.00          
+# MPI_Type_vector           0.0220656     2176          0.00          0.00          
+# MPI_Finalize              0.0174818     512           0.00          0.00          
+# MPI_Type_free             0.00349617    4096          0.00          0.00          
+# MPI_Type_commit           0.00304651    4224          0.00          0.00          
+# MPI_Type_create_resized   0.000848532   2048          0.00          0.00          
+# MPI_Get_processor_name    0.000232697   512           0.00          0.00          
+# MPI_Comm_rank             0.000231981   3584          0.00          0.00          
+# MPI_Wtime                 0.000219822   1024          0.00          0.00          
+# MPI_Comm_size             0.000141859   2624          0.00          0.00          
+# MPI_TOTAL                 19805.8       5.53043e+06   100.00        78.15         
+
